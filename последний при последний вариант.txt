@@ -1,0 +1,326 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int um(int x,int y, int m, int n)
+{
+int z,h;
+double t,p,r,l,a;
+setlocale(LC_ALL, "Russian");
+if((y==0) || (n==0))
+{
+cout<<"Ошибка! деление на 0";
+return 0;
+}
+z=x*m;
+t=z;
+h=n*y;
+p=h;
+r=t/p;
+cout << z << '/' << h;
+if(h%z==0)
+{
+t=z/z;
+p=h/z;
+cout <<" "<<"="<<" "<< t << '/' << p;
+}
+cout<<" "<<"="<<" "<<r;
+return 1;
+}
+int del(int x, int y, int m, int n)
+{
+int z,h;
+double t,p,r,l,a;
+setlocale(LC_ALL, "Russian");
+if((y==0) || (n==0))
+{
+cout<<"Ошибка! деление на 0";
+return 0;
+}
+z=x*n;
+t=z;
+h=y*m;
+p=h;
+r=t/p;
+cout << z << '/' << h;
+if(h%z==0)
+{
+z=z/z;
+h=h/z;
+cout <<" "<<"="<<" "<<z << '/' << h;
+}
+cout<<" "<<"="<<" "<<r;
+return 1;
+}
+int sum(int x, int y, int m,int n)
+{
+int q,t,r,e,j;
+double z,h,b,w,p,i,o,a,u,l,f;
+setlocale(LC_ALL, "Russian");
+if((y==0) || (n==0))
+{
+cout<<"Ошибка! деление на 0";
+return 0;
+}
+if(y==n)
+{
+z=x+m;
+r=z/n;
+e=z-(r*y);
+if(e==0) cout<<r;
+else
+{
+if(n%e)
+{
+    e=e/e;
+    n=n/e;
+}
+if(r!=0)cout<<r <<" " << e << '/' << n;
+else if(r==0) cout<<e<<"/"<<n;
+}
+}
+else
+{
+z=x*n;
+h=y*n;
+t=m*y;
+j=z+t;
+q=h;
+r=j/q;
+e=j-(r*q);
+if(e==0) cout<<r;
+else
+    {
+    cout<<"равно"<<" "<<r<<" целых "<<"и"<<" "<<e<<"/"<<q;
+
+if(q%e==0)
+    {
+        e=e/e;
+        q=q/e;
+        l=e;
+        f=q;
+        u=l/f;
+setlocale(LC_ALL, "Russian");
+cout<<"или это равно"<<" "<<r<<" "<<"целых"<<" "<<"и"<<" "<<e<<"/"<<q<<" "<<"или это равно:"<<" "<<u;
+    }
+   }
+  }
+return 1;
+}
+int rasn(int x, int y, int m, int n)
+{
+int q,t,r,e,j,f=1;
+double z,h,b,w,p,i,o,a;
+setlocale(LC_ALL, "Russian");
+if((y==0) || (n==0))
+{
+cout<<"Ошибка! деление на 0";
+return 0;
+}
+if(y==n)
+{
+z=x-m;
+if(z>n)
+{
+r=z/n;
+e=z-(r*n);
+if(e==0) cout<<r;
+else
+{
+if(r==0) cout<<e<<'/'<<n;
+else cout<< r << " " << e << '/' << n;
+}
+}
+else cout<<z<<'/'<<n;
+if(z==n) cout<<" "<<"="<<" "<<f;
+}
+else
+{
+z=x*n;
+h=y*n;
+t=m*y;
+j=z-t;
+q=h;
+
+r=j/q;
+e=j-(r*q);
+if(e==0) cout<<"равно: "<<r;
+else
+{
+if(r==0) cout<<e<<'/'<<q;
+else cout<< r << " " <<e << '/' <<q;
+if(q%e==0)
+{
+q=q/e;
+e=e/e;
+cout<<" "<<"="<<" "<<r<<" "<<e<<'/'<<q;
+}
+}
+}
+return 1;
+}
+
+int main()
+{
+long c,d;
+int h,x,y,m,n,s,o,k,g;
+double r,z,t,p,v,drob;
+char b,b1,b2,a,b3;
+setlocale(LC_ALL, "Russian");
+cout<<"Выберите действие:";
+cout<<endl<< "1 Для действий(умножения, деления, сложения, вычитания) чисел;";
+cout<<endl<< "2 Для получения квадратного корня числа;";
+cout<<endl<< "3 Для возведения в степень числа;";
+cout<<endl<< "4 Для действий(сложения, вычитания, деления, умножения)  дробей;";
+cout<<endl<< "5 Для получения квадратного корня дроби;";
+cout<<endl<< "6 Для возведения в степень дроби;";
+cout<<endl<< "7 Для решения квадратных уравнений;";
+cout<<endl<< "Конец ввода - 0"<<endl;
+while(k!=0)
+{
+    cout<<endl;
+    cin>>k;
+    if(k==0)
+    {
+    cout<<"Конец ввода.Спасибо, что пользуетесь этой программой.";
+    }
+if(k!=0&&k!=1&&k!=2&&k!=3&&k!=4&&k!=5&&k!=6&&k!=6&&k!=7)
+{
+    cout<<endl<<"Извините, но выбранного вами действий нет в этом калькуляторе";
+    return 0;
+}
+if(k==1)
+{
+cout<<endl<<"Пожалуйста, введите числа:"<<endl;
+int d,b,c;
+char a;
+cin>>d>>a>>b;
+if(a=='+')c=d+b;
+if(a=='-')c=d-b;
+if(a=='*')c=d*b;
+if(a=='/')c=d/b;
+cout<<"равно:"<<c;
+}
+if(k==2)
+{
+ cout<<endl<<"Пожалуйста, введите число:"<<endl;
+double d,c;
+cin>>d;
+if(d==0)
+{
+    cout<<"Ошибка ввода!";
+    return 0;
+}
+c=sqrt(d);
+cout<<"равно:"<<c;
+}
+if(k==3)
+{
+double c;
+cout<<endl<<"Пожалуйста, введите через пробел числа:"<<endl;
+int d,b;
+cin>>d>>b;
+c=pow(d,b);
+cout<<"равно:"<<c;
+}
+if(k==4)
+{
+cout<<endl<<"Пожалуйста, введите дроби:"<<endl;
+cin >> x >> b >> y >> a >> m >> b1 >> n;
+if(a== '*' && b=='/' && b1=='/') s=um(x,y,m,n);
+if(a== '/'&& b=='/'&& b1=='/') s=del(x,y,m,n);
+if(a== '-'&& b=='/'&& b1=='/') s=rasn(x,y,m,n);
+if(a== '+'&& b=='/'&& b1=='/') s=sum(x,y,m,n);
+}
+if(k==5)
+{
+int c,n,h,e,w,g;
+cout<<endl<<"Пожалуйста, введите дробь:"<<endl;
+cin >> x >> a >> m;
+c=sqrt(x);
+n=sqrt(m);
+cout<<"равно:"<<c<<"/"<<n;
+if(c>n)
+{
+    h=c/n;
+    e=c-(h*n);
+  if(e==0) cout<<" или ="<<h;
+  else if(h==0&&e!=0)
+     {
+         cout<<" "<<e<<'/'<<n;
+         w=e;
+         g=n;
+      if(g%w==0)
+        {
+        w=w/w;
+        g=g/w;
+        cout<<" "<<"или"<<w<<"/"<<g;
+        }
+     }
+     if(e!=0 && h!=0)
+{
+    cout<<" или ="<<" "<< h << " " << e << '/' << n;
+    if(n%e==0)
+    {
+    e=e/e;
+    n=n/e;
+    cout<<" или ="<<" "<< h << " " << e << '/' << n;
+    }
+}
+ }
+else
+{
+    if(n%c==0)
+    {
+        n=n/c;
+        c=c/c;
+        v=c;
+        drob=n;
+        p=v/drob;
+        cout<<" или ="<< " " << c << '/' << n<<" или ="<< " "<<p;
+    }
+}
+}
+
+if(k==6)
+{
+double c,n;
+cout<<endl<<"Пожалуйста, введите дробь и степень дроби через пробел:"<<endl;
+cin >>x>>a>>g>>m;
+c=pow(g,m);
+n=pow(x,m);
+cout<<"равно:"<<n<<"/"<<c;
+}
+if(k==7)
+{
+    setlocale(LC_ALL, "Russian");
+    int D,b,c,x,a;
+    double d,x1,x2;
+    cout<<endl<< "Пожалуйста, введите старший коэфицент - а: ";
+    cin>>a;
+    cout<<endl<< "Пожалуйста, введите второй коэфицент - b: ";
+    cin>>b;
+    cout<<endl<< "Пожалуйста, введите свободный член - с: ";
+    cin>>c;
+    D=b*b-4*a*c;
+    if(D>0)
+    {
+        d=sqrt(D);
+        x1=(b*-1+d)/(2*a);
+        x2=(b*-1-d)/(2*a);
+        cout<<endl<<"ответ: x1="<<x1<<endl;
+        cout<<endl<<"ответ: x2="<<x2<<endl;
+    }
+    if(D==0)
+    {
+        x=(b*-1)/(2*a);
+        cout<<endl<<"ответ: x="<<x<<endl;
+    }
+    if(D<0)
+    {
+        cout<<"ответ: нет корней"<<endl;
+    }
+   }
+  }
+}
+
